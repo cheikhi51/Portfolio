@@ -3,8 +3,8 @@ import React from 'react'
 function Skills() {
   return (
     <div className='skills-container ' id='skills'>
-        <h1 className='text-white flex justify-center text-5xl my-15 skills-section-title'>Skills</h1>
-        <div className="flex justify-evenly items-center flex-row flex-wrap gap-10">
+        <h1 className='text-white flex justify-center text-5xl my-15 skills-section-title fade-in-element'>Skills</h1>
+        <div className="flex justify-evenly items-center flex-row flex-wrap gap-10 fade-in-element px-6">
         <div className='skill-card w-30 h-30'>
             <img src='src/html-5-svgrepo-com.svg' className=' w-10 h-10'/>
             <h4 className='font-medium'>Html</h4>

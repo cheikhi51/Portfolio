@@ -1,7 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import Typewriter from 'typewriter-effect';
 
+
+
 function Home() {
+
+  useEffect(() => {
+    const homeAnimation = document.querySelectorAll('.fade-in-element');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('fade-in');
+        }
+      });
+    }, { threshold: 0.1 }); // triggers when 10% of the element is visible
+
+    homeAnimation.forEach(element => {
+      observer.observe(element);
+    });
+
+    return () => {
+      homeAnimation.forEach(element => observer.unobserve(element));
+    };
+  }, []);
   const [upButton, setUpButton] = useState(false);
 
   useEffect(() => {
@@ -31,7 +53,7 @@ function Home() {
   return (
     <>
       <div className="home-container flex flex-col md:flex-row justify-between items-center p-8 m-10" id="home">
-        <div className="text-container">
+        <div className="text-container fade-in-element">
           <h3 className="text-4xl text-white starting-text mb-4">Hello, I'm</h3>
           <h1 className="static-text text-white text-6xl sm:text-center">Mohammed Cheikhi</h1>
           <div className="dynamic-text text-2xl text-teal-400">
@@ -49,7 +71,7 @@ function Home() {
               }}
             />
           </div>
-          <div className="flex justify-start items-center gap-5 mt-5">
+          <div className="flex justify-start items-center gap-5 mt-5 fade-in-element">
             <a href="#contact">
               <button className="getintouchbtn">Get in Touch</button>
             </a>
@@ -61,7 +83,7 @@ function Home() {
             </a>
           </div>
         </div>
-        <img src="src/side_image_prev_ui.png" className="w-85 pr-0.5 h-90" alt="Side" />
+        <img src="src/side_image_prev_ui.png" className="side-image w-85 pr-0.5 h-90" alt="Side" />
       </div>
 
       {/* Scroll-To-Top Button */}

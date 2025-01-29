@@ -1,11 +1,29 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-
+import { useEffect } from "react";
 function Projects() {
+  useEffect(() => {
+      const ProjectsAnimation = document.querySelectorAll('.fade-in-element');
+  
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target); // Stop observing once animated
+          }
+        });
+      }, { threshold: 0.1 }); // Trigger when 10% visible
+  
+      ProjectsAnimation.forEach(element => observer.observe(element));
+  
+      return () => {
+        ProjectsAnimation.forEach(element => observer.unobserve(element));
+      };
+    }, []);
   const projects = [
     {
       title: "KPI Performance",
-      description: "A System that Performe an implementation of performance indicators for an industrial group.",
+      description: "A System that Perform an implementation of performance indicators for an industrial group.",
       imgSrc: "src/statistics-svgrepo-com.svg",
     },
     {
@@ -27,13 +45,13 @@ function Projects() {
 
   return (
     <div className="project-container  py-16 px-8 text-white" id="projects">
-      <h1 className="text-5xl flex justify-center text-white mb-12 projects-section-title">Projects</h1>
+      <h1 className="text-5xl flex justify-center text-white mb-12 projects-section-title fade-in-element">Projects</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
         {projects.map((project, index) => (
           <motion.div
             key={index}
-            className="project-card bg-gradient-to-r from-purple-800 to-indigo-900 rounded-2xl shadow-xl p-8 text-center relative overflow-hidden"
+            className="project-card bg-gradient-to-r from-purple-800 to-indigo-900 rounded-2xl shadow-xl p-8 text-center relative overflow-hidden fade-in-element"
             whileHover={{ scale: 1.05 }}
           >
             <div className="icon-container flex justify-center mb-6">

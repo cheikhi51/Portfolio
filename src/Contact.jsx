@@ -3,10 +3,10 @@ import React from "react";
 function Contact() {
   return (
     <div className="contact-container p-8 text-white min-h-screen " id="contact">
-      <h1 className="text-5xl flex justify-center my-20 contact-section-title">Contact Me</h1>
+      <h1 className="text-5xl flex justify-center my-20 contact-section-title fade-in-element">Contact Me</h1>
       <div className="flex justify-center">
         {/* Combined Card */}
-        <div className="flex flex-col md:flex-row rounded-2xl shadow-xl p-6 w-full max-w-5xl">
+        <div className="flex flex-col md:flex-row rounded-2xl shadow-xl p-6 w-full max-w-5xl fade-in-element">
           {/* Contact Details Section */}
           <div className="side bg-gradient-to-r from-blueviolet to-teal p-6 rounded-xl flex flex-col justify-center items-start w-full md:w-1/2 text-white">
             <h2 className="text-3xl mb-4 getintouch-text">Get in Touch</h2>

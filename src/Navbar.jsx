@@ -21,7 +21,7 @@ function Navbar() {
           aria-label="Toggle menu"
         >
           {isMenuOpen ? (
-            <span role="img" aria-label="close">❌</span>
+            <span role="img" aria-label="close" className="close-toggle">❌</span>
           ) : (
             <span role="img" aria-label="menu" className="text-white">☰</span>
           )}
@@ -32,24 +32,27 @@ function Navbar() {
       <div
   className={`nav-links ${
     isMenuOpen ? "block" : "hidden"
-  } md:flex justify-end md:space-x-6 text-sm sm:flex sm:justify-end font-medium absolute md:static top-26 right-0 w-full backdrop-blur-md bg-gray-800/70 dark:bg-gray-900/80 md:bg-transparent md:dark:bg-transparent md:p-0 p-4 shadow-md md:shadow-none`}
+  } md:flex justify-end md:space-x-6 text-sm sm:flex sm:justify-end sm:items-center absolute font-medium sm:relative md:static top-26 right-0 w-full sm:backdrop-blur bg-gray-800/70 dark:bg-gray-900/80 md:bg-transparent md:p-0 p-4 shadow-md md:shadow-none`}
 >
-  <a href="#home" className="block md:inline hover:text-gray-300 transition text-lg nav-item ">
+  <a href="#home" className="block hover:text-gray-300 transition text-lg nav-item">
     Home
   </a>
-  <a href="#about" className="block md:inline hover:text-gray-300 transition text-lg nav-item">
+  <a href="#about" className="block hover:text-gray-300 transition text-lg nav-item">
     About
   </a>
-  <a href="#education" className="block md:inline hover:text-gray-300 transition text-lg nav-item">
+  <a href="#education" className="block hover:text-gray-300 transition text-lg nav-item">
     Education
   </a>
-  <a href="#projects" className="block md:inline hover:text-gray-300 transition text-lg nav-item">
+  <a href="#projects" className="block hover:text-gray-300 transition text-lg nav-item">
     Projects
   </a>
-  <a href="#skills" className="block md:inline hover:text-gray-300 transition text-lg nav-item">
+  <a href="#experience" className="block hover:text-gray-300 transition text-lg nav-item">
+    Experience
+  </a>
+  <a href="#skills" className="block hover:text-gray-300 transition text-lg nav-item">
     Skills
   </a>
-  <a href="#contact" className="block md:inline hover:text-gray-300 transition text-lg nav-item">
+  <a href="#contact" className="block hover:text-gray-300 transition text-lg nav-item">
     Contact
   </a>
 </div>

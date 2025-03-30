@@ -31,29 +31,30 @@ function Contact() {
             className="form  flex flex-col gap-6 p-6 w-full md:w-1/2 text-gray-100 mt-6"
           >
             <div className="contact-input  relative flex items-center">
-              <img src="src/user-svgrepo-com.svg" alt="User Icon" className="absolute w-8 h-8 ml-2" />
+              <label className="contact-label text-white absolute left-0 flex item">Username</label>
               <input
                 type="text"
                 name="username"
-                placeholder="Username..."
+                placeholder="Username"
                 required
-                className="w-full pl-12 p-3 border-b border-gray-300   text-white focus:outline-none"
+                className="w-full p-3 border-b border-gray-300   text-white focus:outline-none"
               />
             </div>
             <div className="contact-input relative flex items-center">
-              <img src="src/mail-svgrepo-com.svg" alt="Email Icon" className="absolute w-6 h-6 ml-3" />
+              <label className="contact-label text-white absolute left-0">eg@Email.com</label>
               <input
                 type="email"
                 name="email"
                 placeholder="eg@Email.com"
                 required
-                className="w-full pl-12 p-3 border-b border-gray-300   text-white focus:outline-none "
+                className="w-full p-3 border-b border-gray-300   text-white focus:outline-none "
               />
             </div>
             <div className="contact-input relative flex items-center">
+              <label className="contact-label text-white absolute left-0">Message</label>
               <textarea
                 name="message"
-                placeholder="Message..."
+                placeholder="Message"
                 required
                 className="w-full p-3 border-b border-gray-300   text-white focus:outline-none "
               ></textarea>

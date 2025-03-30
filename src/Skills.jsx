@@ -41,6 +41,18 @@ function Skills() {
             <img src='src/java-4-logo-svgrepo-com.svg' className=' w-10 h-10'/>
             <h4 className='font-medium'>Java</h4>
         </div>
+        <div className='skill-card w-30 h-30 '>
+            <img src='src/git-icon-svgrepo-com.svg' className=' w-10 h-10'/>
+            <h4 className='font-medium'>Git</h4>
+        </div>
+        <div className='skill-card w-30 h-30 '>
+            <img src='src/tailwind-svgrepo-com.svg' className=' w-10 h-10'/>
+            <h4 className='font-medium'>Tailwind</h4>
+        </div>
+        <div className='skill-card w-30 h-30 '>
+            <img src='src/android-icon-svgrepo-com.svg' className=' w-10 h-10'/>
+            <h4 className='font-medium'>Android Development</h4>
+        </div>
         </div>
     </div>
   )

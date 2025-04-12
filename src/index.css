@@ -247,12 +247,19 @@ html{
 .contact-button:hover{
   transform: scale(1.2);
 }
-
+.gmail-font:hover{
+  transform: scale(1.2);
+  color: rgb(0, 191, 255);;
+  filter:drop-shadow(0 0 0.75rem rgb(20, 127, 220));
+}
+.gmail-font{
+  transition: all 0.4s ease-in;
+}
 .githubfont{
-  transition: all 0.5s ease-in;
+  transition: all 0.4s ease-in;
 }
 .linkedinfont{
-  transition: all 0.5s ease-in;
+  transition: all 0.4s ease-in;
 }
 .githubfont:hover {
   transform: scale(1.2);
@@ -287,6 +294,17 @@ html{
   width: 4%;
   bottom: -8px;
   left: 42.8%;
+  border: 1px solid  #00c3ff;
+}
+.interest-section-title{
+  position: relative;
+}
+.interest-section-title::after{
+  content: '';
+  position: absolute;
+  width: 4%;
+  bottom: -4px;
+  left: 44%;
   border: 1px solid  #00c3ff;
 }
 .projects-section-title{
@@ -569,4 +587,41 @@ html{
   top: 30px;
   font-size: 40px;
   color: #fff;
+}
+
+.slide-in-right-element {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.slide-in-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+.interest-item:hover{
+  transition: scale 0.6s ease-out , background 0.6s ease-in-out;
+  background: #6a11cb;
+  background: linear-gradient(90deg ,  #11b2cb,#2d5aaf,#5f2daf);
+}
+.interest-item{
+  border: 1px solid #5f2daf;
+}
+
+.downloadCvBtn{
+  border: 2px solid #311286;
+  border-radius: 30px;
+  color: azure;
+  width: 150px;
+  height: 50px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+  background: #6a11cb;
+  background: linear-gradient(0deg , #6a11cb, #2575fc);
+}
+.downloadCvBtn:hover{
+  background: #6a11cb;
+  background: linear-gradient(0deg , #6a11cb, #2575fc);
+  opacity: 0.8;
+  cursor: pointer;
+  transition: all 0.4s ease-out;
 }

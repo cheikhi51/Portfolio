@@ -11,6 +11,9 @@ function Footer() {
         <a href="#about" className="block md:inline hover:text-gray-300 transition text-lg nav-item mr-5">
           About
         </a>
+        <a href="#interest" className="block md:inline hover:text-gray-300 transition text-lg nav-item mr-5">
+          Interests
+        </a>
         <a href="#education" className="block md:inline hover:text-gray-300 transition text-lg nav-item mr-5">
           Education
         </a>

@@ -8,6 +8,7 @@ import Footer from "./Footer";
 import Education from "./Education";
 import Skills from "./Skills";
 import Experience from "./Experience";
+import Interest from "./Interest";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
       <Navbar />
       <Home/>
       <About/>
+      <Interest/>
       <Education/>
       <Projects/>
       <Experience/>

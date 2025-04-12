@@ -50,6 +50,17 @@ function Home() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+  const handleDownloadCV = () => {
+    // Replace with the actual path to your CV file
+    const cvUrl = '/path/to/your-cv.pdf'; // or your-cv.docx depending on the format
+    const link = document.createElement('a');
+    link.href = cvUrl;
+    link.download = 'Mohammed_Cheikhi_CV.pdf'; // The filename you want users to see
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   return (
     <>
       <div className="home-container flex flex-col md:flex-row justify-between items-center p-8 m-10" id="home">
@@ -75,13 +86,22 @@ function Home() {
             <a href="#contact">
               <button className="getintouchbtn">Get in Touch</button>
             </a>
+            <a href="">
+              <button className="downloadCvBtn" onClick={handleDownloadCV}>Download CV</button>
+            </a>
+          </div>
+          <div className='justify-between items-center py-8'>
+            <a className='text-indigo-800' href='mailto:cheikhimohamed51@gmail.com'>
+              <i class="fa-solid fa-envelope fa-2xl pr-3 gmail-font"></i>
+            </a>
+        
             <a className="text-indigo-800" href="https://github.com/cheikhi51">
               <i className="fa-brands fa-github fa-2xl pr-3 githubfont"></i>
             </a>
             <a className="text-indigo-800" href="https://www.linkedin.com/in/mohammed-cheikhi-a48255281/">
               <i className="fa-brands fa-linkedin fa-2xl linkedinfont"></i>
             </a>
-          </div>
+            </div>
         </div>
         <img src="src/side_image_prev_ui.png" className="side-image w-85 pr-0.5 h-90" alt="Side" />
       </div>

@@ -3,6 +3,7 @@ import React, { useEffect } from 'react';
 function About() {
   useEffect(() => {
     const elements = document.querySelectorAll('.slide-in-right-element');
+    const interestElements = document.querySelectorAll('.interest-item');
 
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
@@ -14,9 +15,16 @@ function About() {
     }, { threshold: 0.1 }); // Trigger when 10% visible
 
     elements.forEach(element => observer.observe(element));
+    
+    // Observer for interest items with staggered delay
+    interestElements.forEach((element, index) => {
+      observer.observe(element);
+      element.style.animationDelay = `${index * 0.1}s`;
+    });
 
     return () => {
       elements.forEach(element => observer.unobserve(element));
+      interestElements.forEach(element => observer.unobserve(element));
     };
   }, []);
 

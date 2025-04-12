@@ -32,13 +32,16 @@ function Navbar() {
       <div
   className={`nav-links ${
     isMenuOpen ? "block" : "hidden"
-  } md:flex justify-end md:space-x-6 text-sm sm:flex sm:justify-end sm:items-center absolute font-medium sm:relative md:static top-26 right-0 w-full sm:backdrop-blur bg-gray-800/70 dark:bg-gray-900/80 md:bg-transparent md:p-0 p-4 shadow-md md:shadow-none`}
+  } md:flex justify-end md:space-x-6 text-sm sm:flex sm:justify-end sm:items-center absolute font-medium sm:relative md:static top-26 right-0 w-full sm:backdrop-blur`}
 >
   <a href="#home" className="block hover:text-gray-300 transition text-lg nav-item">
     Home
   </a>
   <a href="#about" className="block hover:text-gray-300 transition text-lg nav-item">
     About
+  </a>
+  <a href="#interest" className="block hover:text-gray-300 transition text-lg nav-item">
+    Interests
   </a>
   <a href="#education" className="block hover:text-gray-300 transition text-lg nav-item">
     Education
